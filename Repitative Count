@@ -1,0 +1,29 @@
+/*To get the count of the repeated elements in a given array*/
+#include <stdio.h>
+int main()
+{
+    int n, i, j, count=0, arr[100];
+    printf("Enter the number of elements in array\n");
+    scanf("%d", &n);
+    printf("Enter the elements of the array");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        count=1;
+        for(j=i+1;j<=n;j++)
+        {
+            if(arr[i]==arr[j] && arr[i]!= 0)
+            {
+                count++;
+                arr[j]= 0;
+            }
+        }
+        if(arr[i]!= 0)
+            printf("%d occurs %d\n",arr[i],count);
+    }
+    return 0;
+}
+
