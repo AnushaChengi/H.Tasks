@@ -26,7 +26,8 @@ int main()
     }
     return 0;
 }
-//outputnter the number of elements in array
+//output
+Enter the number of elements in array
 6
 Enter the elements of the array
 3
