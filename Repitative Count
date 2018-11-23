@@ -12,33 +12,33 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        count=1;
-        for(j=i+1;j<=n;j++)
+        count = 0;
+        for (j=0;j<n;j++)
         {
-            if(a[i]==a[j] && a[i]!= 0)
-            {
+            if(j<i && a[i]==a[j])
+                break;
+        else if(a[i]==a[j])
+        {
                 count++;
-                a[j]= 0;
-            }
         }
-        if(a[i]!= 0)
+        }
+        if(count>0)
+        {
             printf("%d occurs %d times\n",a[i],count);
+        }
     }
-    return 0;
 }
 //output
 Enter the number of elements in array
 6
 Enter the elements of the array
+0
+0
+0
+2
+2
 3
-3
-3
-4
-1
-5
-3 occurs 3
-4 occurs 1
-1 occurs 1
-5 occurs 1
+0 occurs 3 times
+2 occurs 2 times
+3 occurs 1 times
 Program ended with exit code: 0
-
